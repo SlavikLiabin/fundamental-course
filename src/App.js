@@ -1,22 +1,42 @@
 import React, { useState } from "react";
+import ComponentWithClass from "./components/ComponentWithClass";
 import "./styles/App.css";
-import PostItem from "./components/PostItem";
 
-function App() {
-  const [posts, setPosts] = useState([
-    { id: 1, title: "JavaScript", body: "Description" },
-    { id: 2, title: "JavaScript 2", body: "Description" },
-    { id: 3, title: "JavaScript 3", body: "Description" },
-  ]);
-
+export default function App() {
   return (
     <div className="App">
-      <h1>List of posts</h1>
-      {posts.map((post) => (
-        <PostItem post={post} key={post.id} />
-      ))}
+      <ComponentWithClass />
     </div>
   );
 }
 
-export default App;
+// import { useDispatch, useSelector } from "react-redux";
+
+// const dispatch = useDispatch();
+// const cash = useSelector((state) => state.cash);
+
+// const addCash = (cash) => {
+//   dispatch({type:"ADD_CASH", payload: cash})
+// }
+
+// const getCash = (cash) => {
+//   dispatch({type:"GET_CASH", payload: cash})
+// }
+
+// return (
+//   <div>
+//     <div style={{ fontSize: "3rem" }}>{cash}</div>
+//     <div style={{ display: "flex" }}>
+//       <button onClick={() => addCash(Number(prompt()))}>Пополнить счет</button>
+//       <button onClick={() => getCash(Number(prompt()))}>Снять со счета</button>
+//     </div>
+//   </div>
+// );
+
+// {/* <BilateralBinding/> */}
+// {/* <IncrDecr/> */}
+// {/* <ClassCounter/> */}
+
+// import IncrDecr from "./components/IncrDecr";
+// import BilateralBinding from "./components/BilateralBinding";
+// import ClassCounter from "./components/ClassCounter";
